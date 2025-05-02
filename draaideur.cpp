@@ -1,7 +1,7 @@
 #include "draaideur.h"
 #include "deur.h"
 
-Draaideur::Draaideur(int x, int y,unsigned int len, bool liggendeDeur): Deur(x,y,len), liggend(liggendeDeur) {
+Draaideur::Draaideur(int x, int y,unsigned int len, bool liggendeDeur,std::shared_ptr<Codeslot> slot): Deur(x,y,len,slot), liggend(liggendeDeur) {
 
 }
 

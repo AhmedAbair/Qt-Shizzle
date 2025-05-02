@@ -9,8 +9,8 @@ class Deur
 
 {
 public:
-    Deur(int,int,unsigned int);
-    Deur(int,int,unsigned int, shared_ptr<Slot> slot);
+   // Deur(int,int,unsigned int);
+    Deur(int,int,unsigned int, std::shared_ptr<ISlot> slot);
     void open();
     void sluit();
     virtual void teken(QPaintDevice *)=0;
@@ -23,7 +23,7 @@ private:
     int x_coordinaat;
     int y_coordinaat;
     unsigned int lengte;
-    shared_ptr<Slot> slot;
+    std::shared_ptr<ISlot> slot;
 };
 
 #endif // DEUR_H

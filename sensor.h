@@ -16,6 +16,7 @@ public:
     void activeer();
     void deactiveer();
     bool isGeactiveerd()const;
+    virtual ~Sensor() {}
 
     std::pair<int,int> coordinaten() const;
 

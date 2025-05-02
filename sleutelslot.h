@@ -1,15 +1,19 @@
 #ifndef SLEUTELSLOT_H
 #define SLEUTELSLOT_H
+#include <string>
+#include "islot.h"
+#include "define.h"
 
-class Sleutelslot
+class Sleutelslot  : public ISlot
 {
+
 public:
-    Sleutelslot();
+    Sleutelslot(std::string);
     void vergrendel();
     bool isVergrendeld();
-    void ontgrendel(string eenSleutel);
+    void ontgrendel(std::string eenSleutel);
 private:
-    string sleutel;
+    std::string sleutel;
     bool vergrendeld;
 };
 

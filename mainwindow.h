@@ -7,6 +7,7 @@
 #include "hallsensor.h"
 #include "schuifdeur.h"
 #include "draaideur.h"
+#include "sleutelslot.h"
 #include <memory.h>
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -31,10 +32,13 @@ private slots:
 
     void on_DraaiDeurKnop1_clicked();
 
+    void on_lineEdit_returnPressed();
+
 private:
     Ui::MainWindow *ui;
     Sensor *s1;
-    HallSensor *hallsensortje;
+    //HallSensor *hallsensortje;
     vector <shared_ptr<Deur>> verschillendeDeuren;
+    std::shared_ptr<Sleutelslot> sleutelslotje1;
 };
 #endif // MAINWINDOW_H

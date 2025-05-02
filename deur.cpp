@@ -5,8 +5,8 @@
 #include <QPainter>
 #include <QPen>
 
-Deur::Deur(int x, int y,unsigned int len):x_coordinaat(x),y_coordinaat(y),lengte(len),status(DICHT) {}
-Deur::Deur(int x, int y,unsigned int len, shared_ptr<Slot> slot):x_coordinaat(x),y_coordinaat(y),lengte(len),status(DICHT),nieuweSlot(slot) {}
+//Deur::Deur(int x, int y,unsigned int len):x_coordinaat(x),y_coordinaat(y),lengte(len),status(DICHT) {}
+Deur::Deur(int x, int y,unsigned int len, std::shared_ptr<ISlot> slot):x_coordinaat(x),y_coordinaat(y),lengte(len),status(DICHT),slot(slot) {}
 
 void Deur::open(){
     status = OPEN;
@@ -15,19 +15,9 @@ void Deur::sluit(){
     status = DICHT;
 }
 
-// void Deur::teken(QPaintDevice *tp){
-//     QPainter painter(tp);
-//     QPen pen(Qt::black);
-//     painter.setPen(pen);
+void Deur::teken(QPaintDevice *tp){
 
-//     if(isDeurOpen())
-//         painter.drawLine(temp.first,y_coordinaat,x_coordinaat,y_coordinaat+lengte);
-//     else{
-//         painter.drawLine(x_coordinaat,y_coordinaat,x_coordinaat,y_coordinaat-lengte);
-
-//     }
-
-// }
+}
 
 bool Deur::isDeurOpen(){
     return status;

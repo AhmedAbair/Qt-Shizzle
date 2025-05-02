@@ -1,11 +1,12 @@
 #ifndef ISLOT_H
 #define ISLOT_H
+#include <string>
 
 class ISlot
 {
 public:
     ISlot();
-    virtual void ontgrendel(string eenSleutel)=0;
+    virtual void ontgrendel(std::string eenSleutel)=0;
     virtual void vergrendel()=0;
     virtual bool isVergrendeld()=0;
 

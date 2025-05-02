@@ -1,6 +1,6 @@
 #include "codeslot.h"
 
-Codeslot::Codeslot() {}
+Codeslot::Codeslot(int numCode): code(numCode) {}
 
 void Codeslot::vergrendel(){
     vergrendeld = true;
@@ -8,7 +8,7 @@ void Codeslot::vergrendel(){
 bool Codeslot::isVergrendeld(){
 
 }
-void Codeslot::ontgrendel(string eenCode){
+void Codeslot::ontgrendel(std::string eenCode){
     vergrendeld = false;
 
 }

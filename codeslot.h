@@ -1,13 +1,16 @@
 #ifndef CODESLOT_H
 #define CODESLOT_H
+#include <string>
+#include "islot.h"
+#include "define.h"
 
-class Codeslot
+class Codeslot : public ISlot
 {
 public:
-    Codeslot();
+    Codeslot(int);
     void vergrendel();
     bool isVergrendeld();
-    void ontgrendel(string eenCode);
+    void ontgrendel(std::string eenCode);
 private:
     int code;
     bool vergrendeld;

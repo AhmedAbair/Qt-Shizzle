@@ -1,14 +1,15 @@
 #include "sleutelslot.h"
 
-Sleutelslot::Sleutelslot() {}
+Sleutelslot::Sleutelslot(std::string sleuteltje): sleutel(sleuteltje), vergrendeld(VERGRENDELD) {}
 
 void Sleutelslot::vergrendel(){
-    vergrendeld = true;
+    vergrendeld = VERGRENDELD;
 }
 bool Sleutelslot::isVergrendeld(){
 
     return vergrendeld;
 }
-void Sleutelslot::ontgrendel(string eenSleutel){
-    vergrendeld = false;
+void Sleutelslot::ontgrendel(std::string eenSleutel){
+    if(eenSleutel == sleutel)
+    vergrendeld = NIETVERGRENDELD;
 }

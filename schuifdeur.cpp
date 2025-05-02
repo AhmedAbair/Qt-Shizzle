@@ -3,10 +3,10 @@
 #include "deur.h"
 #include <QPainter>
 #include <QPaintDevice>
-
 #include <QPen>
-Schuifdeur::Schuifdeur(int x, int y,unsigned int len, HallSensor* sensorHall): Deur(x,y,len), sensortje(sensorHall) {}
-
+#include "sleutelslot.h"
+Schuifdeur::Schuifdeur(int x, int y, unsigned int len, std::shared_ptr<Sleutelslot> slot, HallSensor* sensorHall)
+    : Deur(x, y, len, slot), sensortje(sensorHall) {}
 
 
 void Schuifdeur::teken(QPaintDevice *tp){

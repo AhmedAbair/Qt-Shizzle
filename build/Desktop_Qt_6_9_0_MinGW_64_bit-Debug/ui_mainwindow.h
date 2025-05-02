@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
@@ -27,6 +28,7 @@ public:
     QPushButton *SchuifDeurKnop;
     QPushButton *DraaiDeurKnop1;
     QPushButton *DraaiDeurKnop2;
+    QLineEdit *lineEdit;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -49,6 +51,9 @@ public:
         DraaiDeurKnop2 = new QPushButton(centralwidget);
         DraaiDeurKnop2->setObjectName("DraaiDeurKnop2");
         DraaiDeurKnop2->setGeometry(QRect(250, 150, 41, 24));
+        lineEdit = new QLineEdit(centralwidget);
+        lineEdit->setObjectName("lineEdit");
+        lineEdit->setGeometry(QRect(90, 180, 113, 24));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
