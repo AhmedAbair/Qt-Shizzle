@@ -1,0 +1,29 @@
+# Qt Creator project files
+*.pro.user
+*.pro.user.*
+*.qmake.stash
+
+# Build directories (zoals build-Desktop_*)
+build-*/
+
+# C++ build outputs
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.a
+*.lib
+
+# macOS app bundles
+*.app
+
+# Temp & autosaves
+*.autosave
+*.swp
+*.tmp
+*.bak
+*.log
+
+# VSCode (indien gebruikt)
+.vscode/
