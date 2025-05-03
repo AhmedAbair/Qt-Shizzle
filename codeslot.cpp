@@ -1,14 +1,25 @@
 #include "codeslot.h"
 
-Codeslot::Codeslot(int numCode): code(numCode) {}
+#include <cstdlib>
+#include <QDebug>
+#include <stdexcept>
+#include <string>
+
+Codeslot::Codeslot(int numCode, bool vergrendeld): code(numCode), vergrendeld(vergrendeld) {}
 
 void Codeslot::vergrendel(){
-    vergrendeld = true;
-}
-bool Codeslot::isVergrendeld(){
 
+    vergrendeld = VERGRENDELD;
 }
+
+bool Codeslot::isVergrendeld(){
+    return vergrendeld;
+}
+
 void Codeslot::ontgrendel(std::string eenCode){
-    vergrendeld = false;
+
+    int Code = std::stoi(eenCode);
+    if(Code == code)
+    vergrendeld = NIETVERGRENDELD;
 
 }

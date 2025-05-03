@@ -2,7 +2,6 @@ debug/codeslot.o
 debug/deur.o
 debug/draaideur.o
 debug/hallsensor.o
-debug/islot.o
 debug/main.o
 debug/mainwindow.o
 debug/schuifdeur.o

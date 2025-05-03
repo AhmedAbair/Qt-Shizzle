@@ -13,7 +13,6 @@ SOURCES += \
     deur.cpp \
     draaideur.cpp \
     hallsensor.cpp \
-    islot.cpp \
     main.cpp \
     mainwindow.cpp \
     schuifdeur.cpp \

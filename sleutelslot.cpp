@@ -1,6 +1,6 @@
 #include "sleutelslot.h"
 
-Sleutelslot::Sleutelslot(std::string sleuteltje): sleutel(sleuteltje), vergrendeld(VERGRENDELD) {}
+Sleutelslot::Sleutelslot(std::string sleuteltje, bool vergrendeld): sleutel(sleuteltje), vergrendeld(vergrendeld) {}
 
 void Sleutelslot::vergrendel(){
     vergrendeld = VERGRENDELD;

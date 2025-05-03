@@ -7,7 +7,7 @@
 class Codeslot : public ISlot
 {
 public:
-    Codeslot(int);
+    Codeslot(int,bool);
     void vergrendel();
     bool isVergrendeld();
     void ontgrendel(std::string eenCode);

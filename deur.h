@@ -10,7 +10,8 @@ class Deur
 {
 public:
    // Deur(int,int,unsigned int);
-    Deur(int,int,unsigned int, std::shared_ptr<ISlot> slot);
+    Deur(int,int,unsigned int);
+    void addSlot(std::shared_ptr<ISlot> slot);
     void open();
     void sluit();
     virtual void teken(QPaintDevice *)=0;

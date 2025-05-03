@@ -29,6 +29,8 @@ public:
     QPushButton *DraaiDeurKnop1;
     QPushButton *DraaiDeurKnop2;
     QLineEdit *lineEdit;
+    QLineEdit *lineEdit_2;
+    QLineEdit *lineEdit_3;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -53,7 +55,13 @@ public:
         DraaiDeurKnop2->setGeometry(QRect(250, 150, 41, 24));
         lineEdit = new QLineEdit(centralwidget);
         lineEdit->setObjectName("lineEdit");
-        lineEdit->setGeometry(QRect(90, 180, 113, 24));
+        lineEdit->setGeometry(QRect(600, 140, 113, 24));
+        lineEdit_2 = new QLineEdit(centralwidget);
+        lineEdit_2->setObjectName("lineEdit_2");
+        lineEdit_2->setGeometry(QRect(360, 280, 71, 24));
+        lineEdit_3 = new QLineEdit(centralwidget);
+        lineEdit_3->setObjectName("lineEdit_3");
+        lineEdit_3->setGeometry(QRect(290, 180, 71, 24));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");

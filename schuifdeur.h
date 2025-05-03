@@ -6,7 +6,7 @@
 #include "sleutelslot.h"
 class Schuifdeur: public Deur{
 public:
-    Schuifdeur(int,int,unsigned int,std::shared_ptr<Sleutelslot> slot, HallSensor* sensorHall);
+    Schuifdeur(int,int,unsigned int, HallSensor* sensorHall);
     void teken(QPaintDevice*);
     void sluit();
 private:

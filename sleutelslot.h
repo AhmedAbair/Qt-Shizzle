@@ -8,7 +8,7 @@ class Sleutelslot  : public ISlot
 {
 
 public:
-    Sleutelslot(std::string);
+    Sleutelslot(std::string, bool);
     void vergrendel();
     bool isVergrendeld();
     void ontgrendel(std::string eenSleutel);

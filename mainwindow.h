@@ -34,11 +34,16 @@ private slots:
 
     void on_lineEdit_returnPressed();
 
+    void on_lineEdit_2_returnPressed();
+
+    void on_lineEdit_3_returnPressed();
+
 private:
     Ui::MainWindow *ui;
     Sensor *s1;
     //HallSensor *hallsensortje;
     vector <shared_ptr<Deur>> verschillendeDeuren;
-    std::shared_ptr<Sleutelslot> sleutelslotje1;
+    vector<shared_ptr<ISlot>> verschillendeSloten;
+    //std::shared_ptr<Sleutelslot> sleutelslotje1;
 };
 #endif // MAINWINDOW_H
