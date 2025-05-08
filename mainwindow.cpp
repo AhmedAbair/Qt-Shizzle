@@ -17,7 +17,6 @@ MainWindow::MainWindow(QWidget *parent)
     verschillendeSloten.push_back(std::make_shared<Codeslot>(5678,true));
 
     verschillendeDeuren.push_back(std::make_shared<Schuifdeur>(503, 250, 80, dynamic_cast<HallSensor*>(s1)));
-
     verschillendeDeuren.push_back(std::make_shared<Draaideur>(295,290,30,true));
     verschillendeDeuren.push_back(std::make_shared<Draaideur>(248,140,40, false));
 
@@ -30,7 +29,9 @@ void MainWindow::paintEvent(QPaintEvent *event){
 
     QPainter painter(this);
     QPen pen;
-    QImage image("D:\\C++\\Qt-Shizzle\\Gebouw.png");
+   // QImage image("D:\\C++\\Qt-Shizzle\\Gebouw.png");
+    QImage image("C:\\C++\\Qt-Shizzle\\Gebouw.png");
+
 
     pen.setColor(Qt::green);
     pen.setWidth(4);
