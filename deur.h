@@ -24,7 +24,7 @@ private:
     int x_coordinaat;
     int y_coordinaat;
     unsigned int lengte;
-    std::shared_ptr<ISlot> slot;
+    std::list<std::shared_ptr<ISlot>> slot;
 };
 
 #endif // DEUR_H
