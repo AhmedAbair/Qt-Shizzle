@@ -4,20 +4,21 @@
 #include <QPaintDevice>
 #include <QPainter>
 #include <QPen>
+#include <QDebug>
 
 //Deur::Deur(int x, int y,unsigned int len):x_coordinaat(x),y_coordinaat(y),lengte(len),status(DICHT) {}
 Deur::Deur(int x, int y,unsigned int len):x_coordinaat(x),y_coordinaat(y),lengte(len),status(DICHT) {}
 
-void Deur::open(){
-      status = OPEN;
-
-    if(slot->isVergrendeld()){
-        status = DICHT;
+void Deur::open() {
+    int i = 0;
+    for (auto it = slot.begin(); it != slot.end(); ++it, ++i) {
+      //  qDebug() << "Slot" << i << "vergrendeld?" << (*it)->isVergrendeld();
+        if ((*it)->isVergrendeld()) {
+            status = DICHT;
+            return;
+        }
     }
-
-
-
-
+    status = OPEN;
 }
 void Deur::sluit(){
 
@@ -36,7 +37,7 @@ unsigned int Deur::deurLengte(){
 }
 
 void Deur::addSlot(std::shared_ptr<ISlot> slot) {
-    this->slot = slot;  // Slot wordt toegevoegd of vervangen
+    this->slot.push_back(slot);
 }
 
 std::pair<int,int> Deur::coordinaten() const {

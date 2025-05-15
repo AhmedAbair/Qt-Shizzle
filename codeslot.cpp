@@ -18,8 +18,15 @@ bool Codeslot::isVergrendeld(){
 
 void Codeslot::ontgrendel(std::string eenCode){
 
-    int Code = std::stoi(eenCode);
-    if(Code == code)
-    vergrendeld = NIETVERGRENDELD;
+    try {
+        int Code = std::stoi(eenCode);
+        if (Code == code) {
+            vergrendeld = NIETVERGRENDELD;
+        }
+    } catch (const std::invalid_argument& e) {
+        qDebug() << "Ongeldige invoer voor CodeSlot (geen nummer):" << QString::fromStdString(eenCode);
+    } catch (const std::out_of_range& e) {
+        qDebug() << "CodeSlot invoer buiten bereik:" << QString::fromStdString(eenCode);
+    }
 
 }
