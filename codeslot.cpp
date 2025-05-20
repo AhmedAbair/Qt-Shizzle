@@ -24,7 +24,7 @@ void Codeslot::ontgrendel(std::string eenCode){
             vergrendeld = NIETVERGRENDELD;
         }
     } catch (const std::invalid_argument& e) {
-        qDebug() << "Ongeldige invoer voor CodeSlot (geen nummer):" << QString::fromStdString(eenCode);
+        qDebug() << "Naam:" << QString::fromStdString(eenCode);
     } catch (const std::out_of_range& e) {
         qDebug() << "CodeSlot invoer buiten bereik:" << QString::fromStdString(eenCode);
     }

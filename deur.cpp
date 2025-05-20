@@ -12,7 +12,6 @@ Deur::Deur(int x, int y,unsigned int len):x_coordinaat(x),y_coordinaat(y),lengte
 void Deur::open() {
     int i = 0;
     for (auto it = slot.begin(); it != slot.end(); ++it, ++i) {
-      //  qDebug() << "Slot" << i << "vergrendeld?" << (*it)->isVergrendeld();
         if ((*it)->isVergrendeld()) {
             status = DICHT;
             return;
